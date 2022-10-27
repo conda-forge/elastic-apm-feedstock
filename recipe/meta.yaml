@@ -24,6 +24,7 @@ requirements:
     - certifi
     - python >=3.6,<4.0
     - urllib3
+    - wrapt >=1.14.1
 
 test:
   imports:
