@@ -25,7 +25,7 @@ requirements:
     - ecs-logging
     - python >=3.6,<4.0
     - urllib3
-    - wrapt>=1.14.1,<1.15.0
+    - wrapt >=1.14.1,<1.15.0
 
 test:
   imports:
