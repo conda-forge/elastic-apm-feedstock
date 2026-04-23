@@ -1,5 +1,5 @@
 {% set name = "elastic-apm" %}
-{% set version = "6.23.0" %}
+{% set version = "6.25.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/elastic-apm-{{ version }}.tar.gz
-  sha256: 1aeef4562486bd9ad611bba15f9eca5aeede6a737777541cb68c47c6cf5df7d4
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 7845f53a5ccc65a21c3e44a18f69cf821e0c326ebb8a6e8ac3257bdaf58aa40d
 
 build:
   number: 0
