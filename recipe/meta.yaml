@@ -11,7 +11,7 @@ source:
   sha256: b0f87636fc83af346f6569965732c91e245530256df2ce33d45c1862af2dc97d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script_env: ELASTIC_APM_WRAP_EXTENSIONS=false
   script: {{ PYTHON }} -m pip install . -vv
@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<4.0
+    - python {{ python_min }}
     - setuptools
   run:
     - certifi
     - ecs-logging
-    - python >=3.6,<4.0
+    - python >={{ python_min }},<4.0
     - urllib3
     - wrapt >=1.14.1,!=1.15.0
 
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/elastic/apm-agent-python
